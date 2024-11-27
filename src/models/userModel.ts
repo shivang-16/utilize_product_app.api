@@ -8,6 +8,8 @@ const userSchema = new Schema<IUser>({
     required: [true, "Please enter your name"],
   },
   email: { type: String, required: true, unique: true },
+  password: { type: String},
+  salt: String,
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });
